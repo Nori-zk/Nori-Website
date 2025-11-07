@@ -1,3 +1,7 @@
+# Nori Website
+
+This is the Nori website, constructed with React + Vite (see below)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
