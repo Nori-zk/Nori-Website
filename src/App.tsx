@@ -1,5 +1,5 @@
 import LightRays from "./blocks/Backgrounds/LightRays/LightRays";
-import Header from "./Header/Header";
+import Header from "./components/Header/Header";
 import "./main.css";
 
 function App(): JSX.Element {
