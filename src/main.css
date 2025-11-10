@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-green: #062817;
+  --color-very-dark-green: #060A08;
+  --color-connected-green: #1f3029;
+  --color-light-green: #64E18E;
+  --color-very-dark-red: #3F1717;
+  --color-dark-red: #950606;
+  --color-light-red: #FF0000;
+}
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-primary: 'Clash Display', sans-serif;
+  --foreground-rgb: 0, 0, 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
