@@ -18,6 +18,7 @@ export const CONTENT_BLOCK_FRAGMENT = `
       ...SysFields
     }
     heading
+    greenText
     body {
       json
     }

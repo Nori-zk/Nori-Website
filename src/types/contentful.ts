@@ -38,6 +38,7 @@ export interface ContentBlock {
   sys: ContentfulSys;
   heading: string;
   body: RichText;
+  greenText: string;
 }
 
 // Section content type
@@ -67,3 +68,12 @@ export interface QueryOptions {
   skip?: number;
   order?: string;
 }
+
+export enum SectionTags {
+  SectionOne = "section-one",
+  SectionTwo = "section-two",
+}
+
+export type SectionProps = {
+  section: Section | undefined;
+};
