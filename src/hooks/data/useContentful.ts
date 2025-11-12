@@ -3,9 +3,12 @@ import {
   fetchGraphQL,
   extractCollectionItems,
   buildPaginationVars,
-} from "../api/contentful";
-import { GET_SECTIONS_QUERY, GET_SECTIONS_BY_TAG_QUERY } from "../api/queries";
-import type { Section, QueryOptions } from "../types/contentful";
+} from "../../api/contentful";
+import {
+  GET_SECTIONS_QUERY,
+  GET_SECTIONS_BY_TAG_QUERY,
+} from "../../api/queries";
+import type { Section, QueryOptions } from "../../types/contentful";
 
 /**
  * Hook to fetch all Sections (with nested ContentBlocks)
