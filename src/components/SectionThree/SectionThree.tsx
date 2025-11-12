@@ -7,7 +7,6 @@ import BottomLeftLightOne from "../../assets/Group_148.svg?react";
 import BottomLeftLightTwo from "../../assets/Group_150.svg?react";
 
 const SectionThree = ({ section }: SectionProps) => {
-  console.log("SectionThree section:", section);
   return (
     <div className="section-three w-full min-h-screen md:h-auto relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
       <TopRectangle

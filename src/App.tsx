@@ -1,9 +1,10 @@
 import LightRays from "./blocks/Backgrounds/LightRays/LightRays";
 import Header from "./components/Header/Header";
+import SectionFour from "./components/Sections/SectionFour/SectionFour";
 import SectionOne from "./components/Sections/SectionOne/SectionOne";
 import SectionTwo from "./components/Sections/SectionTwo/SectionTwo";
 import SectionThree from "./components/SectionThree/SectionThree";
-import { useSections } from "./hooks/useContentful";
+import { useSections } from "./hooks/data/useContentful";
 import "./main.css";
 import { SectionTags } from "./types/contentful";
 
@@ -34,6 +35,11 @@ function App(): JSX.Element {
         <div className="flex w-full justify-center">
           <SectionThree
             section={sections?.find((s) => s.tag === SectionTags.SectionThree)}
+          />
+        </div>
+        <div className="flex w-full justify-center">
+          <SectionFour
+            section={sections?.find((s) => s.tag === SectionTags.SectionFour)}
           />
         </div>
       </div>

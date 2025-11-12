@@ -73,6 +73,7 @@ export enum SectionTags {
   SectionOne = "section-one",
   SectionTwo = "section-two",
   SectionThree = "section-three",
+  SectionFour = "section-four",
 }
 
 export type SectionProps = {
