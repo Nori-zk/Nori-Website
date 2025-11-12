@@ -72,6 +72,7 @@ export interface QueryOptions {
 export enum SectionTags {
   SectionOne = "section-one",
   SectionTwo = "section-two",
+  SectionThree = "section-three",
 }
 
 export type SectionProps = {
