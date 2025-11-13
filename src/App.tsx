@@ -5,11 +5,12 @@ import Header from "./components/Header/Header";
 import SectionFour from "./components/Sections/SectionFour/SectionFour";
 import SectionOne from "./components/Sections/SectionOne/SectionOne";
 import SectionTwo from "./components/Sections/SectionTwo/SectionTwo";
-import SectionThree from "./components/SectionThree/SectionThree";
+import SectionThree from "./components/Sections/SectionThree/SectionThree";
 import { useSections } from "./hooks/data/useContentful";
 import { useScrolledFromTop } from "./hooks/ui/useScrolledFromTop";
 import "./main.css";
 import { SectionTags } from "./types/contentful";
+import SectionFive from "./components/Sections/SectionFive/SectionFive";
 
 function App(): JSX.Element {
   const { data: sections, isLoading, error } = useSections();
@@ -70,6 +71,13 @@ function App(): JSX.Element {
               <SectionFour
                 section={sections?.find(
                   (s) => s.tag === SectionTags.SectionFour
+                )}
+              />
+            </div>
+            <div className="flex w-full justify-center">
+              <SectionFive
+                section={sections?.find(
+                  (s) => s.tag === SectionTags.SectionFive
                 )}
               />
             </div>
