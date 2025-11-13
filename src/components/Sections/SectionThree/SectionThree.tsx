@@ -1,10 +1,10 @@
-import { SectionProps } from "../../types/contentful";
-import TopRectangle from "../../assets/Rectangle_69.svg?react";
-import BottomRectangle from "../../assets/Rectangle_70.svg?react";
-import TopRightLightOne from "../../assets/Group_147.svg?react";
-import TopRightLightTwo from "../../assets/Group_149.svg?react";
-import BottomLeftLightOne from "../../assets/Group_148.svg?react";
-import BottomLeftLightTwo from "../../assets/Group_150.svg?react";
+import { SectionProps } from "../../../types/contentful";
+import TopRectangle from "../../../assets/Rectangle_69.svg?react";
+import BottomRectangle from "../../../assets/Rectangle_70.svg?react";
+import TopRightLightOne from "../../../assets/Group_147.svg?react";
+import TopRightLightTwo from "../../../assets/Group_149.svg?react";
+import BottomLeftLightOne from "../../../assets/Group_148.svg?react";
+import BottomLeftLightTwo from "../../../assets/Group_150.svg?react";
 
 const SectionThree = ({ section }: SectionProps) => {
   return (
