@@ -46,7 +46,7 @@ const SectionSix = ({ section }: SectionProps) => {
       {/* Center Border Card */}
       <div
         style={{
-          width: "1500px",
+          width: "830px",
           height: "550px",
           position: "relative",
           overflow: "hidden",
@@ -68,7 +68,9 @@ const SectionSix = ({ section }: SectionProps) => {
                   {section?.greentext}
                 </span>
               </div>
-              <div className="text-white text-center mb-6">{section?.slug}</div>
+              <div className="text-white text-center mb-6 px-8">
+                {section?.slug}
+              </div>
               <div className="flex justify-center">
                 {hover ? (
                   <ElectricBorder
