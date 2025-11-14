@@ -35,6 +35,7 @@ const SectionFive = ({ section }: SectionProps) => {
           <div className="w-4/5">
             {section?.contentBlocks?.map((cb) => (
               <RichTextRenderer
+                key={cb.sys.id}
                 content={cb.body}
                 className="text-base sm:text-lg md:text-xl lg:text-2xl font-light "
               />

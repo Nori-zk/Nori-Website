@@ -11,6 +11,7 @@ import { useScrolledFromTop } from "./hooks/ui/useScrolledFromTop";
 import "./main.css";
 import { SectionTags } from "./types/contentful";
 import SectionFive from "./components/Sections/SectionFive/SectionFive";
+import SectionSix from "./components/Sections/SectionSix/SectionSix";
 
 function App(): JSX.Element {
   const { data: sections, isLoading, error } = useSections();
@@ -81,6 +82,14 @@ function App(): JSX.Element {
                 )}
               />
             </div>
+            <div className="flex w-full justify-center">
+              <SectionSix
+                section={sections?.find(
+                  (s) => s.tag === SectionTags.SectionSix
+                )}
+              />
+            </div>
+            <div className="my-16"></div>
           </div>
         </div>
       </div>
