@@ -5,10 +5,26 @@ import TopRightLightOne from "../../../assets/Group_147.svg?react";
 import TopRightLightTwo from "../../../assets/Group_149.svg?react";
 import BottomLeftLightOne from "../../../assets/Group_148.svg?react";
 import BottomLeftLightTwo from "../../../assets/Group_150.svg?react";
+import One from "../../../assets/01.svg?react";
+import Two from "../../../assets/02.svg?react";
+import Three from "../../../assets/03.svg?react";
+import { ReactNode } from "react";
+
+const GetGreenNumber = (numberString: string): ReactNode => {
+  const svgClassName = "h-12 sm:h-14 md:h-16 lg:h-20 w-auto";
+
+  if (numberString === "01") {
+    return <One className={svgClassName} />;
+  } else if (numberString === "02") {
+    return <Two className={svgClassName} />;
+  } else if (numberString === "03") {
+    return <Three className={svgClassName} />;
+  }
+};
 
 const SectionThree = ({ section }: SectionProps) => {
   return (
-    <div className="section-three w-full min-h-screen md:h-auto relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
+    <div className="section-three w-full min-h-[800px] sm:min-h-[900px] md:min-h-screen md:h-auto relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
       <TopRectangle
         width="100%"
         preserveAspectRatio="none"
@@ -39,7 +55,7 @@ const SectionThree = ({ section }: SectionProps) => {
                 className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8"
               >
                 <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-[var(--color-light-green)] flex-shrink-0">
-                  {cb.greenText}
+                  {GetGreenNumber(cb.greenText)}
                 </div>
                 <div className="flex flex-col text-base sm:text-lg md:text-xl lg:text-2xl font-light flex items-center">
                   {cb.heading}
