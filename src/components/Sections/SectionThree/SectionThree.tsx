@@ -24,7 +24,7 @@ const GetGreenNumber = (numberString: string): ReactNode => {
 
 const SectionThree = ({ section }: SectionProps) => {
   return (
-    <div className="section-three w-full min-h-[800px] sm:min-h-[900px] md:min-h-screen md:h-auto relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
+    <div className="section-three w-full min-h-[1000px] sm:min-h-[1100px] md:min-h-[700px] relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
       <TopRectangle
         width="100%"
         preserveAspectRatio="none"

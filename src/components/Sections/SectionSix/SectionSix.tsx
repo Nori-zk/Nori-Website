@@ -1,17 +1,17 @@
 import { SectionProps } from "../../../types/contentful";
-import Border from "../../BridgeControlCardSVG/BridgeControlCardSVG";
 import LaserFlow from "../../../blocks/Animations/LaserFlow/LaserFlow";
 import ElectricBorder from "../../../blocks/Animations/ElectricBorder/ElectricBorder";
 import { useState } from "react";
+import FooterImage from "../../../assets/Footer.png";
 
 const SectionSix = ({ section }: SectionProps) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="flex w-full justify-center items-center h-full">
+    <div className="flex w-full justify-center items-center h-full px-4 md:px-8 py-8 md:py-12">
       {/* Left LaserFlow */}
       <div
-        className="w-1/4 h-[450px] flex items-center justify-end pr-4 relative overflow-hidden"
+        className="flex w-1/4 h-[600px] md:h-[450px] items-center justify-end pr-2 md:pr-4 relative overflow-hidden"
         style={{
           maskImage:
             "linear-gradient(to right, transparent 0%, white 15%, white 100%)",
@@ -43,32 +43,35 @@ const SectionSix = ({ section }: SectionProps) => {
         </div>
       </div>
 
-      {/* Center Border Card */}
+      {/* Center Card with Background Image */}
       <div
+        className="w-full lg:w-auto relative flex justify-center"
         style={{
-          width: "830px",
-          height: "550px",
-          position: "relative",
-          overflow: "hidden",
-          borderRadius: "20px",
-          justifyContent: "center",
-          display: "flex",
+          maxWidth: "1404px",
           zIndex: 10,
         }}
       >
-        <Border>
-          <div className="text-white w-full h-full flex flex-col items-center justify-center">
-            <div
-              style={{ width: "830px" }}
-              className="flex flex-col items-center"
-            >
-              <div className="text-white text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium mb-4">
+        <div className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[675px]">
+          {/* Background Image */}
+          <img
+            src={FooterImage}
+            alt="Footer background"
+            className="w-full h-full object-contain absolute inset-0"
+            style={{
+              minHeight:
+                "min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[675px]",
+            }}
+          />
+          {/* Content Overlay */}
+          <div className="relative inset-0 flex flex-col items-center justify-center p-4 md:p-8 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[675px]">
+            <div className="w-full flex flex-col items-center">
+              <div className="text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-medium mb-2 md:mb-4">
                 {section?.title}{" "}
                 <span className="text-[var(--color-light-green)]">
                   {section?.greentext}
                 </span>
               </div>
-              <div className="text-white text-center mb-6 px-8">
+              <div className="text-white text-center text-sm sm:text-base md:text-lg lg:text-xl mb-4 md:mb-6 px-4 md:px-8">
                 {section?.slug}
               </div>
               <div className="flex justify-center">
@@ -84,7 +87,10 @@ const SectionSix = ({ section }: SectionProps) => {
                     <button
                       onMouseEnter={() => setHover(true)}
                       onMouseLeave={() => setHover(false)}
-                      className="text-white px-8 py-3"
+                      className="text-white text-sm sm:text-base md:text-lg px-6 md:px-8 py-2 md:py-3"
+                      onClick={() => {
+                        window.location.href = "https://alpha.app.nori-zk.com/";
+                      }}
                     >
                       {"Start Now"}
                     </button>
@@ -93,7 +99,7 @@ const SectionSix = ({ section }: SectionProps) => {
                   <button
                     onMouseEnter={() => setHover(true)}
                     onMouseLeave={() => setHover(false)}
-                    className="text-white px-8 py-3 border border-[var(--color-light-green)] rounded-2xl"
+                    className="text-white text-sm sm:text-base md:text-lg px-6 md:px-8 py-2 md:py-3 border border-[var(--color-light-green)] rounded-2xl"
                   >
                     {"Start Now"}
                   </button>
@@ -101,12 +107,12 @@ const SectionSix = ({ section }: SectionProps) => {
               </div>
             </div>
           </div>
-        </Border>
+        </div>
       </div>
 
       {/* Right LaserFlow */}
       <div
-        className="w-1/4 h-[450px] flex items-center justify-start pl-4 relative overflow-hidden"
+        className="flex w-1/4 h-[600px] md:h-[450px] items-center justify-start pl-2 md:pl-4 relative overflow-hidden"
         style={{
           maskImage:
             "linear-gradient(to left, transparent 0%, white 15%, white 100%)",
