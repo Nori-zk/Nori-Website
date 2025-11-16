@@ -10,12 +10,14 @@ const SectionSix = ({ section }: SectionProps) => {
     <div className="flex w-full justify-center items-center px-0 md:px-4 lg:px-8 py-8 md:py-12 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[675px]">
       {/* Left LaserFlow */}
       <div
-        className="flex w-[15%] lg:w-[20%] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[675px] items-center justify-end pr-0 lg:pr-2 relative overflow-hidden"
+        className="flex w-[15%] lg:w-[20%] h-[360px] sm:h-[460px] md:h-[560px] lg:h-[560px] items-center justify-end pr-0 lg:pr-2 relative overflow-hidden"
         style={{
           maskImage:
-            "linear-gradient(to right, transparent 0%, white 15%, white 100%)",
+            "linear-gradient(to right, transparent 0%, white 15%, white 100%), linear-gradient(to bottom, transparent 0%, white 10%, white 90%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0%, white 15%, white 100%)",
+            "linear-gradient(to right, transparent 0%, white 15%, white 100%), linear-gradient(to bottom, transparent 0%, white 10%, white 90%, transparent 100%)",
+          maskComposite: "intersect",
+          WebkitMaskComposite: "source-in",
         }}
       >
         <div
@@ -141,12 +143,14 @@ const SectionSix = ({ section }: SectionProps) => {
 
       {/* Right LaserFlow */}
       <div
-        className="flex w-[15%] lg:w-[20%] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[675px] items-center justify-start pl-0 lg:pl-2 relative overflow-hidden"
+        className="flex w-[15%] lg:w-[20%] h-[360px] sm:h-[460px] md:h-[560px] lg:h-[560px] items-center justify-start pl-0 lg:pl-2 relative overflow-hidden"
         style={{
           maskImage:
-            "linear-gradient(to left, transparent 0%, white 15%, white 100%)",
+            "linear-gradient(to left, transparent 0%, white 15%, white 100%), linear-gradient(to bottom, transparent 0%, white 10%, white 90%, transparent 100%)",
           WebkitMaskImage:
-            "linear-gradient(to left, transparent 0%, white 15%, white 100%)",
+            "linear-gradient(to left, transparent 0%, white 15%, white 100%), linear-gradient(to bottom, transparent 0%, white 10%, white 90%, transparent 100%)",
+          maskComposite: "intersect",
+          WebkitMaskComposite: "source-in",
         }}
       >
         <div
