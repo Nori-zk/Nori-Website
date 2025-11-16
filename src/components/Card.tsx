@@ -63,6 +63,7 @@ const Card = ({ contentBlock, orientation = "horizontal" }: CardProps) => {
   if (config.enableElectricBorder) {
     return (
       <div
+        className={config.containerClassName}
         style={config.containerStyle}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}

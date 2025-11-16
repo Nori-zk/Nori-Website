@@ -40,18 +40,17 @@ export const useCardProps = (orientation: CardOrientation): CardConfig => {
 
   // vertical orientation
   return {
-    containerClassName: "mx-auto my-0 p-[1px] rounded-xl md:rounded-2xl",
+    containerClassName: "mx-auto my-0 p-[1px] rounded-xl md:rounded-2xl flex-shrink-0 w-[85vw] sm:w-[320px] md:w-[360px] lg:w-[380px]",
     containerStyle: {
-      width: "414px",
-      height: "526px",
+      height: "400px",
     },
     innerClassName:
-      "flex flex-col w-full h-full p-6 md:p-10 lg:p-8 xl:p-16 rounded-xl md:rounded-2xl gap-6",
+      "flex flex-col w-full h-full p-6 md:p-8 lg:p-8 xl:p-12 rounded-xl md:rounded-2xl gap-4 md:gap-6",
     showGreenText: false,
-    titleClassName: "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-2xl",
+    titleClassName: "text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl",
     greenTextClassName: "",
     bodyClassName:
-      "text-base sm:text-lg md:text-xl lg:text-2xl xl:text-xl font-light",
+      "text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-light",
     enableElectricBorder: true,
   };
 };
