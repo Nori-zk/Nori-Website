@@ -154,15 +154,14 @@ jobs:
             console.log('========================================\n');
             
             // Install dependencies - try without legacy first, then with if needed
-            // Unset NODE_ENV to ensure devDependencies are installed (NODE_ENV=production would skip them)
             console.log('Installing dependencies...');
-            let installResult = run('NODE_ENV= npm ci');
+            let installResult = run('npm ci');
             let firstAttemptOutput = '';
             
             if (!installResult.success) {
               firstAttemptOutput = installResult.output;
               console.log('Standard npm ci failed, trying with --legacy-peer-deps...');
-              installResult = run('NODE_ENV= npm ci --legacy-peer-deps');
+              installResult = run('npm ci --legacy-peer-deps');
               
               if (installResult.success) {
                 results.usedLegacyPeerDeps = true;
@@ -427,7 +426,7 @@ jobs:
             results.sections.forEach(section => {
               if (section.status === 'FAIL') {
                 if (section.name === 'Dependencies' && section.message.includes('failed even with')) {
-                  insights.push(`**Critical:** Dependencies cannot be installed. Check error details above and resolve package.json issues or network problems.`);
+                  insights.push(`**Critical:** Dependencies installation failed. To reproduce locally, run: \`npm ci\` or \`npm ci --legacy-peer-deps\`. Check error details above and resolve dependency conflicts.`);
                 } else if (section.name === 'Dependencies' && section.message.includes('node_modules is empty')) {
                   insights.push(`**Critical:** npm ci succeeded but node_modules is missing. Check filesystem permissions and npm cache integrity.`);
                 } else if (section.name === 'Prettier' && section.message.includes('not installed')) {
