@@ -127,9 +127,10 @@ const SectionSix = ({ section }: SectionProps) => {
                     </ElectricBorder>
                   ) : (
                     <button
+                      disabled
                       onMouseEnter={() => setHover(true)}
                       onMouseLeave={() => setHover(false)}
-                      className="text-white text-sm sm:text-base md:text-lg px-6 md:px-8 py-2 md:py-3 border border-[var(--color-light-green)] rounded-2xl"
+                      className="text-white/20 text-sm sm:text-base md:text-lg px-6 md:px-8 py-2 md:py-3  border border-[var(--color-light-green)]/20 rounded-2xl"
                     >
                       {"Start Now"}
                     </button>
