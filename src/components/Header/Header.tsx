@@ -11,14 +11,14 @@ const Header = () => {
       <div className="flex w-1/2 justify-end">
         <PiXLogo
           size={40}
-          className="text-gray-200/20 m-4 hover:cursor-pointer"
+          className="text-gray-200/20 m-4 hover:cursor-pointer hover:text-white"
           onClick={() => {
             window.location.href = "https://x.com/nori_zk?s=20";
           }}
         />
         <FaDiscord
           size={40}
-          className="text-gray-200/20 m-4 hover:cursor-pointer"
+          className="text-gray-200/20 m-4 hover:cursor-pointer hover:text-[#7289da]"
           onClick={() => {
             window.location.href = "https://discord.gg/3MnGpT4w9a";
           }}
