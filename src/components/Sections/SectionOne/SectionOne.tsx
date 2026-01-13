@@ -18,7 +18,10 @@ const SectionOne = ({ section }: SectionProps) => {
         </div>
       </div>
       <div className="flex w-full justify-center mt-6 md:mt-8">
-        <BottomShadows className="scale-75 sm:scale-90 md:scale-100 w-full max-w-4xl" title="BottomShadows" />
+        <BottomShadows
+          className="h-0 md:h-auto scale-75 sm:scale-90 md:scale-100 w-full max-w-4xl"
+          title="BottomShadows"
+        />
       </div>
     </div>
   );
