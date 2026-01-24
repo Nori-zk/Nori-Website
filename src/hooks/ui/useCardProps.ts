@@ -29,11 +29,11 @@ export const useCardProps = (orientation: CardOrientation): CardConfig => {
         "flex flex-col lg:flex-row items-center justify-between w-full min-h-[200px] md:min-h-[250px] lg:min-h-[284px] p-6 md:p-10 lg:p-8 xl:p-16 rounded-xl md:rounded-2xl gap-6 lg:gap-8",
       showGreenText: true,
       titleClassName:
-        "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2",
+        "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl mt-2",
       greenTextClassName:
-        "text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[var(--color-light-green)]",
+        "text-lg sm:text-xl md:text-2xl lg:text-2xl text-[var(--color-light-green)]",
       bodyClassName:
-        "w-full lg:w-[60%] text-base sm:text-lg md:text-xl lg:text-2xl font-light",
+        "w-full lg:w-[60%] text-sm sm:text-base md:text-lg lg:text-lg font-light",
       enableElectricBorder: false,
     };
   }
