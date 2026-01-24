@@ -12,10 +12,10 @@ const SectionFive = ({ section }: SectionProps) => {
       <div className="relative z-20">
         <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-12">
           <div className="w-full lg:w-1/2 z-5">
-            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl">
+            <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
               {section?.title}
             </div>
-            <div className="text-base sm:text-lg md:text-xl lg:text-2xl font-light mt-4">
+            <div className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light mt-4">
               {section?.slug}
             </div>
           </div>
@@ -23,13 +23,13 @@ const SectionFive = ({ section }: SectionProps) => {
             <Swap />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row w-full pt-8 md:pt-12 gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row w-full lg:pt-6 xl:pt-6 gap-8 lg:gap-12">
           <div className="flex w-full lg:w-1/5 h-auto justify-center">
             <div className="justify-center bg-white/10 p-4 h-full rounded-xl w-full max-w-sm lg:max-w-none">
-              <div className="bg-[var(--color-light-green)] text-[var(--color-very-dark-green)] py-4 px-2 rounded-xl text-sm sm:text-base md:text-lg lg:text-xl font-light flex justify-center text-medium">
+              <div className="bg-[var(--color-light-green)] text-[var(--color-very-dark-green)] py-4 px-2 rounded-xl text-sm sm:text-base md:text-base lg:text-lg font-light flex justify-center text-medium">
                 Ethereum ↦ Mina
               </div>
-              <div className="text-white py-4 px-2 rounded-xl text-sm sm:text-base md:text-lg lg:text-xl font-light flex justify-center">
+              <div className="text-white py-4 px-2 rounded-xl text-sm sm:text-base md:text-base lg:text-lg font-light flex justify-center">
                 Mina ↦ Ethereum
               </div>
             </div>
@@ -39,7 +39,7 @@ const SectionFive = ({ section }: SectionProps) => {
               <RichTextRenderer
                 key={cb.sys.id}
                 content={cb.body}
-                className="text-base sm:text-lg md:text-xl lg:text-2xl font-light"
+                className="text-sm sm:text-base md:text-base lg:text-lg font-light"
               />
             ))}
           </div>
