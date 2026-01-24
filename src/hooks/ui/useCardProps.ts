@@ -45,7 +45,7 @@ export const useCardProps = (orientation: CardOrientation): CardConfig => {
       height: "400px",
     },
     innerClassName:
-      "flex flex-col w-full h-full p-6 md:p-8 lg:p-8 xl:p-12 rounded-xl md:rounded-2xl gap-4 md:gap-6",
+      "flex flex-col w-full h-full p-6 md:p-8 lg:p-8 xl:p-12 rounded-xl md:rounded-2xl gap-2 md:gap-3",
     showGreenText: false,
     titleClassName: "text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl",
     greenTextClassName: "",
