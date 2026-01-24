@@ -24,7 +24,7 @@ const GetGreenNumber = (numberString: string): ReactNode => {
 
 const SectionThree = ({ section }: SectionProps) => {
   return (
-    <div className="section-three w-full min-h-[1000px] sm:min-h-[1100px] md:min-h-[700px] relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
+    <div className="section-three w-full min-h-[750px] sm:min-h-[650px] md:min-h-[700px] relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
       <TopRectangle
         width="100%"
         preserveAspectRatio="none"
@@ -37,10 +37,10 @@ const SectionThree = ({ section }: SectionProps) => {
       </div>
 
       {/* Content Area */}
-      <div className="z-30 text-white w-full h-full flex justify-center items-center px-4 md:px-8 lg:px-12">
-        <div className="flex flex-col lg:flex-row w-3/4 gap-6 lg:gap-4">
+      <div className="z-30 text-white w-full h-full flex justify-center items-center px-2 sm:px-4 md:px-8 lg:px-12">
+        <div className="flex flex-col lg:flex-row lg:items-center w-full sm:w-11/12 md:w-5/6 lg:w-3/4 gap-6 lg:gap-4">
           <div className="w-full lg:w-1/2 font-light-medium">
-            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
               {section?.title}
             </div>
             <div className="flex flex-col text-base sm:text-lg md:text-xl lg:text-2xl mt-2 md:mt-4">
@@ -52,12 +52,12 @@ const SectionThree = ({ section }: SectionProps) => {
             {section?.contentBlocks?.map((cb) => (
               <div
                 key={cb.sys.id}
-                className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8"
+                className="flex flex-row gap-3 sm:gap-4 mb-6 md:mb-8"
               >
                 <div className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-[var(--color-light-green)] flex-shrink-0">
                   {GetGreenNumber(cb.greenText)}
                 </div>
-                <div className="flex flex-col text-base sm:text-lg md:text-xl lg:text-2xl font-light flex items-center">
+                <div className="flex flex-col justify-center text-base sm:text-lg md:text-xl lg:text-2xl font-light">
                   {cb.heading}
                 </div>
               </div>
