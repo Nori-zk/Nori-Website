@@ -33,14 +33,15 @@ export const useCardProps = (orientation: CardOrientation): CardConfig => {
       greenTextClassName:
         "text-lg sm:text-xl md:text-2xl lg:text-2xl text-[var(--color-light-green)]",
       bodyClassName:
-        "w-full lg:w-[60%] text-sm sm:text-base md:text-lg lg:text-lg font-light",
+        "w-full lg:w-[60%] text-sm sm:text-base md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-light",
       enableElectricBorder: false,
     };
   }
 
   // vertical orientation
   return {
-    containerClassName: "mx-auto my-0 p-[1px] rounded-xl md:rounded-2xl flex-shrink-0 w-[85vw] sm:w-[320px] md:w-[360px] lg:w-[380px]",
+    containerClassName:
+      "mx-auto my-0 p-[1px] rounded-xl md:rounded-2xl flex-shrink-0 w-[85vw] sm:w-[320px] md:w-[360px] lg:w-[380px]",
     containerStyle: {
       height: "400px",
     },

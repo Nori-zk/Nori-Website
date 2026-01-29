@@ -23,7 +23,7 @@ const SectionFive = ({ section }: SectionProps) => {
             <Swap />
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row w-full lg:pt-6 xl:pt-6 gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row w-full lg:pt-6 xl:pt-4 gap-8 lg:gap-12">
           <div className="flex w-full lg:w-1/5 h-auto justify-center">
             <div className="justify-center bg-white/10 p-4 h-full rounded-xl w-full max-w-sm lg:max-w-none">
               <div className="bg-[var(--color-light-green)] text-[var(--color-very-dark-green)] py-4 px-2 rounded-xl text-sm sm:text-base md:text-base lg:text-lg font-light flex justify-center text-medium">
@@ -39,7 +39,7 @@ const SectionFive = ({ section }: SectionProps) => {
               <RichTextRenderer
                 key={cb.sys.id}
                 content={cb.body}
-                className="text-sm sm:text-base md:text-base lg:text-lg font-light"
+                className="text-sm sm:text-base md:text-base lg:text-lg xl:text-lg 2xl:text-xl font-light"
               />
             ))}
           </div>
