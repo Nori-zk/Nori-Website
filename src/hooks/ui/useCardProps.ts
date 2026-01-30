@@ -33,7 +33,7 @@ export const useCardProps = (orientation: CardOrientation): CardConfig => {
       greenTextClassName:
         "text-lg sm:text-xl md:text-2xl lg:text-2xl text-[var(--color-light-green)]",
       bodyClassName:
-        "w-full lg:w-[60%] text-sm sm:text-base md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-light",
+        "w-full lg:w-[60%] text-sm sm:text-base md:text-lg lg:text-lg xl:text-lg 2xl:text-2xl font-light",
       enableElectricBorder: false,
     };
   }
