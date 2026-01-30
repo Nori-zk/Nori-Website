@@ -82,3 +82,8 @@ body,
   font-family: var(--font-primary);
   background-color: var(--color-very-dark-green);
 }
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

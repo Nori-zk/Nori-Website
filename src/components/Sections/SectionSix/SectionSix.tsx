@@ -7,7 +7,7 @@ const SectionSix = ({ section }: SectionProps) => {
   const [hover, setHover] = useState(false);
 
   return (
-    <div className="flex w-full justify-center items-center px-0 md:px-4 lg:px-8 py-8 md:py-12 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[675px]">
+    <div className="flex w-full justify-center items-center px-0 md:px-4 lg:px-8 pt-8 md:pt-12 pb-4 md:pb-6 min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[675px]">
       {/* Left LaserFlow */}
       <div
         className="flex w-[15%] lg:w-[20%] h-[360px] sm:h-[460px] md:h-[560px] lg:h-[560px] items-center justify-end pr-0 lg:pr-2 relative overflow-hidden"

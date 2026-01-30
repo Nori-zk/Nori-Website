@@ -5,7 +5,7 @@ import Arrow from "../assets/Arrow.svg?react";
 const Swap = () => {
   return (
     <div
-      className="grid grid-cols-2 grid-rows-2 gap-1 mx-auto scale-50 sm:scale-75 md:scale-90 lg:scale-100"
+      className="grid grid-cols-2 grid-rows-2 gap-1 mx-auto scale-50 sm:scale-75 md:scale-90 lg:scale-75 xl:scale-90"
       style={{ width: "400px", height: "400px" }}
     >
       <div className="flex justify-center items-center -ml-16 lg:-ml-32 w-full h-full">

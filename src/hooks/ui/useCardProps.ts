@@ -29,23 +29,24 @@ export const useCardProps = (orientation: CardOrientation): CardConfig => {
         "flex flex-col lg:flex-row items-center justify-between w-full min-h-[200px] md:min-h-[250px] lg:min-h-[284px] p-6 md:p-10 lg:p-8 xl:p-16 rounded-xl md:rounded-2xl gap-6 lg:gap-8",
       showGreenText: true,
       titleClassName:
-        "text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-2",
+        "text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl mt-2",
       greenTextClassName:
-        "text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[var(--color-light-green)]",
+        "text-lg sm:text-xl md:text-2xl lg:text-2xl text-[var(--color-light-green)]",
       bodyClassName:
-        "w-full lg:w-[60%] text-base sm:text-lg md:text-xl lg:text-2xl font-light",
+        "w-full lg:w-[60%] text-sm sm:text-base md:text-lg lg:text-lg xl:text-lg 2xl:text-2xl font-light",
       enableElectricBorder: false,
     };
   }
 
   // vertical orientation
   return {
-    containerClassName: "mx-auto my-0 p-[1px] rounded-xl md:rounded-2xl flex-shrink-0 w-[85vw] sm:w-[320px] md:w-[360px] lg:w-[380px]",
+    containerClassName:
+      "mx-auto my-0 p-[1px] rounded-xl md:rounded-2xl flex-shrink-0 w-[85vw] sm:w-[320px] md:w-[360px] lg:w-[380px]",
     containerStyle: {
       height: "400px",
     },
     innerClassName:
-      "flex flex-col w-full h-full p-6 md:p-8 lg:p-8 xl:p-12 rounded-xl md:rounded-2xl gap-4 md:gap-6",
+      "flex flex-col w-full h-full p-6 md:p-8 lg:p-8 xl:p-12 rounded-xl md:rounded-2xl gap-2 md:gap-3",
     showGreenText: false,
     titleClassName: "text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-2xl",
     greenTextClassName: "",

@@ -4,8 +4,10 @@ import { FaDiscord } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between relative z-5 p-4">
-      <Nori width={130} height={50} />
+    <div className="flex items-center justify-between relative z-5 px-4 py-6">
+      <div className="ml-4 mt-2">
+        <Nori width={130} height={50} />
+      </div>
       <div className="flex w-1/2 justify-end">
         <PiXLogo
           size={40}

@@ -20,17 +20,18 @@ const Card = ({ contentBlock, orientation = "horizontal" }: CardProps) => {
   `;
 
   const innerGradient = `
-    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 0%, transparent 80%),
-    radial-gradient(10% 10% at 0% 0%, rgba(91, 209, 132, 0.2) 0%, rgba(91, 209, 132, 0.004) 100%),
-    radial-gradient(10% 10% at 100% 100%, rgba(91, 209, 132, 0.2) 0%, rgba(91, 209, 132, 0.004) 100%)
+    linear-gradient(-30deg, rgba(91, 209, 132, 0.08), transparent, rgba(110, 225, 143, 0.08)),
+    radial-gradient(circle at 50% 50%, rgba(10, 10, 10, 1) 0%, transparent 80%),
+    radial-gradient(40% 40% at 0% 0%, rgba(91, 209, 132, 0.12) 0%, rgba(91, 209, 132, 0) 100%),
+    radial-gradient(40% 40% at 100% 100%, rgba(91, 209, 132, 0.12) 0%, rgba(91, 209, 132, 0) 100%),
+    linear-gradient(to bottom, #0a0a0a, #0a0a0a)
   `;
 
   const cardContent = (
     <div
       className={config.innerClassName}
       style={{
-        background: innerGradient,
-        backdropFilter: "blur(1000px)",
+        background: hover ? "none" : innerGradient,
       }}
     >
       <div
