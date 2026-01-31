@@ -1,6 +1,6 @@
 import Nori from "../../assets/Nori.svg?react";
 import { PiXLogo } from "react-icons/pi";
-import { FaDiscord } from "react-icons/fa";
+import { FaDiscord, FaGithub } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -23,8 +23,15 @@ const Header = () => {
             window.open(
               "https://discord.gg/3MnGpT4w9a",
               "_blank",
-              "noreferrer"
+              "noreferrer",
             );
+          }}
+        />
+        <FaGithub
+          size={40}
+          className="text-gray-200/20 m-4 hover:cursor-pointer hover:text-white"
+          onClick={() => {
+            window.open("https://github.com/nori-zk", "_blank", "noreferrer");
           }}
         />
       </div>
