@@ -87,3 +87,34 @@ body,
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Force GPU acceleration and prevent deoptimization on scroll */
+.section-three,
+[class*="Section"] {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Safari-friendly border animation */
+@keyframes borderPulse {
+  0%, 100% {
+    border-color: var(--color-light-green);
+    box-shadow: 0 0 5px var(--color-light-green);
+  }
+  50% {
+    border-color: #5BD184;
+    box-shadow: 0 0 15px var(--color-light-green);
+  }
+}
+
+.safari-border-static {
+  border: 1px solid rgba(100, 225, 142, 0.3);
+}
+
+.safari-border-animate {
+  border: 2px solid var(--color-light-green);
+  animation: borderPulse 1.5s ease-in-out infinite;
+}

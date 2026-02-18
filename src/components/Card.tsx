@@ -13,6 +13,9 @@ const Card = ({ contentBlock, orientation = "horizontal" }: CardProps) => {
   const [hover, setHover] = useState(false);
   const config = useCardProps(orientation);
 
+  // Detect Safari
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
   // Shared gradient backgrounds
   const borderGradient = `
     radial-gradient(6% 100% at 4% 0%, #6EE18F 0%, rgba(44, 236, 99, 0) 100%),
@@ -31,7 +34,7 @@ const Card = ({ contentBlock, orientation = "horizontal" }: CardProps) => {
     <div
       className={config.innerClassName}
       style={{
-        background: hover ? "none" : innerGradient,
+        background: (hover && !isSafari) ? "none" : innerGradient,
       }}
     >
       <div
@@ -60,7 +63,7 @@ const Card = ({ contentBlock, orientation = "horizontal" }: CardProps) => {
     </div>
   );
 
-  // Vertical orientation with electric border on hover
+  // Vertical orientation with electric border on hover (CSS animation for Safari)
   if (config.enableElectricBorder) {
     return (
       <div
@@ -69,7 +72,7 @@ const Card = ({ contentBlock, orientation = "horizontal" }: CardProps) => {
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
-        {hover ? (
+        {hover && !isSafari ? (
           <ElectricBorder
             color={"var(--color-light-green)"}
             speed={1}
@@ -82,9 +85,11 @@ const Card = ({ contentBlock, orientation = "horizontal" }: CardProps) => {
           </ElectricBorder>
         ) : (
           <div
-            className="h-full p-[1px] rounded-xl md:rounded-2xl"
+            className={`h-full rounded-xl md:rounded-2xl ${
+              hover && isSafari ? "safari-border-animate p-0" : "p-[1px]"
+            }`}
             style={{
-              background: borderGradient,
+              background: (hover && isSafari) ? "transparent" : borderGradient,
             }}
           >
             {cardContent}

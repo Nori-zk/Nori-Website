@@ -49,7 +49,7 @@ function App(): JSX.Element {
               <div className="h-1/2 w-full justify-center mt-20">
                 <SectionOne
                   section={sections?.find(
-                    (s) => s.tag === SectionTags.SectionOne
+                    (s) => s.tag === SectionTags.SectionOne,
                   )}
                 />
               </div>
@@ -57,38 +57,71 @@ function App(): JSX.Element {
             <div className="flex justify-center">
               <SectionTwo
                 section={sections?.find(
-                  (s) => s.tag === SectionTags.SectionTwo
+                  (s) => s.tag === SectionTags.SectionTwo,
                 )}
               />
             </div>
             <div className="flex w-full justify-center">
               <SectionThree
                 section={sections?.find(
-                  (s) => s.tag === SectionTags.SectionThree
+                  (s) => s.tag === SectionTags.SectionThree,
                 )}
               />
             </div>
+            {/* <div style={{ height: "500px", backgroundColor: "#111", border: "2px solid red" }}>
+              Section Three Placeholder
+            </div> */}
+
             <div className="flex w-full justify-center">
               <SectionFour
                 section={sections?.find(
-                  (s) => s.tag === SectionTags.SectionFour
+                  (s) => s.tag === SectionTags.SectionFour,
                 )}
               />
             </div>
+            {/* <div
+              style={{
+                height: "500px",
+                backgroundColor: "#222",
+                border: "2px solid blue",
+              }}
+            >
+              Section Four Placeholder
+            </div> */}
+
             <div className="flex w-full justify-center">
               <SectionFive
                 section={sections?.find(
-                  (s) => s.tag === SectionTags.SectionFive
+                  (s) => s.tag === SectionTags.SectionFive,
                 )}
               />
             </div>
+            {/* <div
+              style={{
+                height: "500px",
+                backgroundColor: "#333",
+                border: "2px solid green",
+              }}
+            >
+              Section Five Placeholder
+            </div> */}
+
             <div className="flex w-full justify-center">
               <SectionSix
                 section={sections?.find(
-                  (s) => s.tag === SectionTags.SectionSix
+                  (s) => s.tag === SectionTags.SectionSix,
                 )}
               />
             </div>
+            {/* <div
+              style={{
+                height: "500px",
+                backgroundColor: "#444",
+                border: "2px solid yellow",
+              }}
+            >
+              Section Six Placeholder
+            </div> */}
             <div className="my-16"></div>
           </div>
         </div>

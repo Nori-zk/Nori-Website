@@ -1,39 +1,48 @@
 import { SectionProps } from "../../../types/contentful";
-import TopRectangle from "../../../assets/Rectangle_69.svg?react";
-import BottomRectangle from "../../../assets/Rectangle_70.svg?react";
-import TopRightLightOne from "../../../assets/Group_147.svg?react";
-import TopRightLightTwo from "../../../assets/Group_149.svg?react";
-import BottomLeftLightOne from "../../../assets/Group_148.svg?react";
-import BottomLeftLightTwo from "../../../assets/Group_150.svg?react";
-import One from "../../../assets/01.svg?react";
-import Two from "../../../assets/02.svg?react";
-import Three from "../../../assets/03.svg?react";
-import { ReactNode } from "react";
+import TopRectangle from "../../../assets/Rectangle_69.svg";
+import BottomRectangle from "../../../assets/Rectangle_70.svg";
+import TopRightLightOne from "../../../assets/Group_147.svg";
+import TopRightLightTwo from "../../../assets/Group_149.svg";
+import BottomLeftLightOne from "../../../assets/Group_148.svg";
+import BottomLeftLightTwo from "../../../assets/Group_150.svg";
+import One from "../../../assets/01.svg";
+import Two from "../../../assets/02.svg";
+import Three from "../../../assets/03.svg";
+import { ReactNode, memo } from "react";
 
 const GetGreenNumber = (numberString: string): ReactNode => {
   const svgClassName = "h-12 sm:h-14 md:h-16 lg:h-20 w-auto";
 
   if (numberString === "01") {
-    return <One className={svgClassName} />;
+    return <img src={One} className={svgClassName} alt="01" />;
   } else if (numberString === "02") {
-    return <Two className={svgClassName} />;
+    return <img src={Two} className={svgClassName} alt="02" />;
   } else if (numberString === "03") {
-    return <Three className={svgClassName} />;
+    return <img src={Three} className={svgClassName} alt="03" />;
   }
 };
 
 const SectionThree = ({ section }: SectionProps) => {
   return (
     <div className="section-three w-full min-h-[750px] sm:min-h-[650px] md:min-h-[700px] relative flex flex-col justify-between py-8 md:py-12 lg:py-16">
-      <TopRectangle
-        width="100%"
-        preserveAspectRatio="none"
+      <img
+        src={TopRectangle}
+        alt="Top decoration"
         className="w-full absolute top-0 z-20"
+        style={{ width: "100%", height: "auto" }}
       />
 
       <div className="absolute top-1 right-0 z-10 w-1/2 md:w-2/5 lg:w-1/2">
-        <TopRightLightOne className="absolute top-0 right-0 w-full" />
-        <TopRightLightTwo className="absolute top-0 right-0 w-full" />
+        <img
+          src={TopRightLightOne}
+          className="absolute top-0 right-0 w-full"
+          alt="Top Right Light One"
+        />
+        <img
+          src={TopRightLightTwo}
+          className="absolute top-0 right-0 w-full"
+          alt="Top Right Light Two"
+        />
       </div>
 
       {/* Content Area */}
@@ -67,18 +76,27 @@ const SectionThree = ({ section }: SectionProps) => {
       </div>
 
       <div className="absolute bottom-1 left-0 z-10 w-1/2 md:w-2/5 lg:w-1/2">
-        <BottomLeftLightOne className="absolute bottom-0 left-0 w-full" />
-        <BottomLeftLightTwo className="absolute bottom-0 left-0 w-full" />
+        <img
+          src={BottomLeftLightOne}
+          className="absolute bottom-0 left-0 w-full"
+          alt="Bottom Left Light One"
+        />
+        <img
+          src={BottomLeftLightTwo}
+          className="absolute bottom-0 left-0 w-full"
+          alt="Bottom Left Light Two"
+        />
       </div>
 
       {/* Bottom Rectangle - Opaque with high z-index */}
-      <BottomRectangle
-        width="100%"
-        preserveAspectRatio="none"
+      <img
+        src={BottomRectangle}
+        alt="Bottom decoration"
         className="w-full absolute bottom-0 z-20"
+        style={{ width: "100%", height: "auto" }}
       />
     </div>
   );
 };
 
-export default SectionThree;
+export default memo(SectionThree);
